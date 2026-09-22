@@ -1,0 +1,94 @@
+<mujoco model="010_potted_meat_can">
+  <compiler meshdir="assets" texturedir="assets"/>
+
+  <default>
+    <default class="ycb_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0" mass="0"/>
+    </default>
+    <default class="ycb_collision">
+      <geom group="3" type="mesh" condim="6" priority="1" solref="0.01 2" solimp="0.99 0.999 0.001 0.5 1"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture type="2d" name="texture_map" file="texture_map.png"/>
+    <material name="material_0" texture="texture_map"/>
+    <mesh file="010_potted_meat_can.obj"/>
+    <mesh file="010_potted_meat_can_collision_0.obj"/>
+    <mesh file="010_potted_meat_can_collision_1.obj"/>
+    <mesh file="010_potted_meat_can_collision_2.obj"/>
+    <mesh file="010_potted_meat_can_collision_3.obj"/>
+    <mesh file="010_potted_meat_can_collision_4.obj"/>
+    <mesh file="010_potted_meat_can_collision_5.obj"/>
+    <mesh file="010_potted_meat_can_collision_6.obj"/>
+    <mesh file="010_potted_meat_can_collision_7.obj"/>
+    <mesh file="010_potted_meat_can_collision_8.obj"/>
+    <mesh file="010_potted_meat_can_collision_9.obj"/>
+    <mesh file="010_potted_meat_can_collision_10.obj"/>
+    <mesh file="010_potted_meat_can_collision_11.obj"/>
+    <mesh file="010_potted_meat_can_collision_12.obj"/>
+    <mesh file="010_potted_meat_can_collision_13.obj"/>
+    <mesh file="010_potted_meat_can_collision_14.obj"/>
+    <mesh file="010_potted_meat_can_collision_15.obj"/>
+    <mesh file="010_potted_meat_can_collision_16.obj"/>
+    <mesh file="010_potted_meat_can_collision_17.obj"/>
+    <mesh file="010_potted_meat_can_collision_18.obj"/>
+    <mesh file="010_potted_meat_can_collision_19.obj"/>
+    <mesh file="010_potted_meat_can_collision_20.obj"/>
+    <mesh file="010_potted_meat_can_collision_21.obj"/>
+    <mesh file="010_potted_meat_can_collision_22.obj"/>
+    <mesh file="010_potted_meat_can_collision_23.obj"/>
+    <mesh file="010_potted_meat_can_collision_24.obj"/>
+    <mesh file="010_potted_meat_can_collision_25.obj"/>
+    <mesh file="010_potted_meat_can_collision_26.obj"/>
+    <mesh file="010_potted_meat_can_collision_27.obj"/>
+    <mesh file="010_potted_meat_can_collision_28.obj"/>
+    <mesh file="010_potted_meat_can_collision_29.obj"/>
+    <mesh file="010_potted_meat_can_collision_30.obj"/>
+    <mesh file="010_potted_meat_can_collision_31.obj"/>
+    <mesh file="010_potted_meat_can_collision_32.obj"/>
+  </asset>
+  
+  <worldbody>
+    <body name="body">
+      <inertial pos="0 0 0" mass="0.37" diaginertia="0.00045691 0.00033978 0.00026822"/>
+      <joint name="joint" type='free' damping="0.005"/>
+      <geom name="visual_geom" material="material_0" mesh="010_potted_meat_can" class="ycb_visual"/>
+      <geom name="collision_geom_0" mesh="010_potted_meat_can_collision_0" rgba="0.43467094850537713 0.16258176487450182 0.03426073301021071 1" class="ycb_collision"/>
+      <geom name="collision_geom_1" mesh="010_potted_meat_can_collision_1" rgba="0.043484124927096524 0.033574326899999285 0.3649699930046403 1" class="ycb_collision"/>
+      <geom name="collision_geom_2" mesh="010_potted_meat_can_collision_2" rgba="0.6901625109504863 0.38550560520802035 0.4121238796742588 1" class="ycb_collision"/>
+      <geom name="collision_geom_3" mesh="010_potted_meat_can_collision_3" rgba="0.3348730105818325 0.6887808512602926 0.040012873745265076 1" class="ycb_collision"/>
+      <geom name="collision_geom_4" mesh="010_potted_meat_can_collision_4" rgba="0.8582114471801856 0.8790086128980157 0.18267549504734826 1" class="ycb_collision"/>
+      <geom name="collision_geom_5" mesh="010_potted_meat_can_collision_5" rgba="0.736900632392754 0.547220502332131 0.43900039242525835 1" class="ycb_collision"/>
+      <geom name="collision_geom_6" mesh="010_potted_meat_can_collision_6" rgba="0.19420526041142439 0.16468658892197197 0.4585509426931168 1" class="ycb_collision"/>
+      <geom name="collision_geom_7" mesh="010_potted_meat_can_collision_7" rgba="0.5396068889811519 0.17534358866348887 0.22112873848464887 1" class="ycb_collision"/>
+      <geom name="collision_geom_8" mesh="010_potted_meat_can_collision_8" rgba="0.8527488067983384 0.890604296084223 0.8295168307484104 1" class="ycb_collision"/>
+      <geom name="collision_geom_9" mesh="010_potted_meat_can_collision_9" rgba="0.004152894470449975 0.6314886440990717 0.8768418790541403 1" class="ycb_collision"/>
+      <geom name="collision_geom_10" mesh="010_potted_meat_can_collision_10" rgba="0.9874338613561064 0.3105091995098923 0.11660853693627415 1" class="ycb_collision"/>
+      <geom name="collision_geom_11" mesh="010_potted_meat_can_collision_11" rgba="0.985766192162167 0.6106877128969755 0.2352662250280746 1" class="ycb_collision"/>
+      <geom name="collision_geom_12" mesh="010_potted_meat_can_collision_12" rgba="0.9583694062442465 0.42971045446386524 0.019678842779148553 1" class="ycb_collision"/>
+      <geom name="collision_geom_13" mesh="010_potted_meat_can_collision_13" rgba="0.7663525846745867 0.6013158787155366 0.8999736766955341 1" class="ycb_collision"/>
+      <geom name="collision_geom_14" mesh="010_potted_meat_can_collision_14" rgba="0.41429404931858327 0.44525087616787407 0.4480478625396621 1" class="ycb_collision"/>
+      <geom name="collision_geom_15" mesh="010_potted_meat_can_collision_15" rgba="0.2902483181614869 0.22124699539759662 0.8387843440213734 1" class="ycb_collision"/>
+      <geom name="collision_geom_16" mesh="010_potted_meat_can_collision_16" rgba="0.8782140297487251 0.8741847785083464 0.22107835059633885 1" class="ycb_collision"/>
+      <geom name="collision_geom_17" mesh="010_potted_meat_can_collision_17" rgba="0.31352163809949096 0.28342122670227343 0.5916687706063068 1" class="ycb_collision"/>
+      <geom name="collision_geom_18" mesh="010_potted_meat_can_collision_18" rgba="0.40045453371371 0.43898873641040004 0.3826606603546021 1" class="ycb_collision"/>
+      <geom name="collision_geom_19" mesh="010_potted_meat_can_collision_19" rgba="0.8464747420277963 0.9411781789751499 0.2046824696716235 1" class="ycb_collision"/>
+      <geom name="collision_geom_20" mesh="010_potted_meat_can_collision_20" rgba="0.6372478146941674 0.9185954774366466 0.12190384451842917 1" class="ycb_collision"/>
+      <geom name="collision_geom_21" mesh="010_potted_meat_can_collision_21" rgba="0.023036765830234285 0.8744689675804705 0.18671177774387815 1" class="ycb_collision"/>
+      <geom name="collision_geom_22" mesh="010_potted_meat_can_collision_22" rgba="0.8703029599428344 0.643738069574249 0.9146324195784322 1" class="ycb_collision"/>
+      <geom name="collision_geom_23" mesh="010_potted_meat_can_collision_23" rgba="0.996407373315841 0.14224804692403747 0.2907727207752173 1" class="ycb_collision"/>
+      <geom name="collision_geom_24" mesh="010_potted_meat_can_collision_24" rgba="0.9183050215976358 0.6319867089808566 0.8258098869785127 1" class="ycb_collision"/>
+      <geom name="collision_geom_25" mesh="010_potted_meat_can_collision_25" rgba="0.758587768747496 0.6056878679652021 0.83563160363468 1" class="ycb_collision"/>
+      <geom name="collision_geom_26" mesh="010_potted_meat_can_collision_26" rgba="0.2980515787033826 0.9165399190988187 0.41088848913810927 1" class="ycb_collision"/>
+      <geom name="collision_geom_27" mesh="010_potted_meat_can_collision_27" rgba="0.2562317339596004 0.6905999961550962 0.6598717912436314 1" class="ycb_collision"/>
+      <geom name="collision_geom_28" mesh="010_potted_meat_can_collision_28" rgba="0.17713553858415454 0.141989777816671 0.22005677522022227 1" class="ycb_collision"/>
+      <geom name="collision_geom_29" mesh="010_potted_meat_can_collision_29" rgba="0.31407163390483916 0.254218491324787 0.28867163902204196 1" class="ycb_collision"/>
+      <geom name="collision_geom_30" mesh="010_potted_meat_can_collision_30" rgba="0.38972254769375625 0.009036361954938843 0.5779863044674931 1" class="ycb_collision"/>
+      <geom name="collision_geom_31" mesh="010_potted_meat_can_collision_31" rgba="0.8809944521445987 0.32909917589624726 0.4265804785052676 1" class="ycb_collision"/>
+      <geom name="collision_geom_32" mesh="010_potted_meat_can_collision_32" rgba="0.5531153858837263 0.02320977806953406 0.026794860090791017 1" class="ycb_collision"/>
+      <site name="barcode" group="4" rgba="1 0 0 1" pos="-0.00522 -0.047954 0.005731" quat="0.5 0.5 -0.5 0.5"/>
+    </body>
+
+  </worldbody>
+</mujoco>

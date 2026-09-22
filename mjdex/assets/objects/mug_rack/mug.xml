@@ -1,0 +1,37 @@
+<mujoco model="mug">
+  <compiler angle="radian" meshdir="assets" texturedir="assets" inertiafromgeom="auto"/>
+
+  <default>
+    <default class="mug_rack_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0" mass="0"/>
+    </default>
+    <default class="mug_rack_collision">
+      <geom group="3" type="mesh" condim="6" priority="1" solref="0.01 1" solimp="0.99 0.999 0.001 0.5 1"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture type="2d" name="mug_texture" file="material_0.png"/>
+    <material name="mug_material" texture="mug_texture"/>
+    <mesh name="mug" file="muggood.obj"/>
+  </asset>
+
+  <worldbody>
+    <body name="body">
+      <joint name="joint" type="free" damping="0.005"/>
+      <geom name="visual_geom" material="mug_material" mesh="mug" class="mug_rack_visual"/>
+      <geom name="collision_geom" mesh="mug" class="mug_rack_collision"/>
+    </body>
+
+    <body name="target_body" mocap="true" pos="0 0 1" quat="1 0 0 0">
+      <geom name="target_visual_geom"
+            type="mesh"
+            mesh="mug"
+            material="mug_material"
+            contype="0"
+            conaffinity="0"
+            group="2"
+            rgba="1 1 1 0.25"/>
+    </body>
+  </worldbody>
+</mujoco>

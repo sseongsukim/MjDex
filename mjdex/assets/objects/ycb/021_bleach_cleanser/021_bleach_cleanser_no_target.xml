@@ -1,0 +1,34 @@
+<mujoco model="021_bleach_cleanser">
+  <compiler meshdir="assets" texturedir="assets"/>
+
+  <default>
+    <default class="ycb_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0" mass="0"/>
+    </default>
+    <default class="ycb_collision">
+      <geom group="3" type="mesh" condim="6" priority="1" solref="0.01 2" solimp="0.99 0.999 0.001 0.5 1"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture type="2d" name="texture_map" file="texture_map.png"/>
+    <material name="material_0" texture="texture_map"/>
+    <mesh file="021_bleach_cleanser.obj"/>
+    <mesh file="021_bleach_cleanser_collision_0.obj"/>
+    <mesh file="021_bleach_cleanser_collision_1.obj"/>
+    <mesh file="021_bleach_cleanser_collision_2.obj"/>
+  </asset>
+  
+  <worldbody>
+    <body name="body">
+      <inertial pos="0 0 0" mass="0.35" diaginertia="0.0055521 0.00519834 0.00086819"/>
+      <joint name="joint" type='free' damping="0.005"/>
+      <geom name="vosual_geom" material="material_0" mesh="021_bleach_cleanser" class="ycb_visual"/>
+      <geom name="collision_geom_0" mesh="021_bleach_cleanser_collision_0" rgba="0.677580688318911 0.030952272692056915 0.4543779444396546 1" class="ycb_collision"/>
+      <geom name="collision_geom_1" mesh="021_bleach_cleanser_collision_1" rgba="0.21580045691632344 0.24817586332196606 0.7215878000866727 1" class="ycb_collision"/>
+      <geom name="collision_geom_2" mesh="021_bleach_cleanser_collision_2" rgba="0.31400804666670756 0.2745682151278337 0.6272271196411815 1" class="ycb_collision"/>
+      <site name="barcode" group="4" rgba="1 0 0 1" pos="-0.031735 -0.01317 -0.073959" quat="-0.5 -0.5 0.5 0.5" />
+    </body>
+
+  </worldbody>
+</mujoco>

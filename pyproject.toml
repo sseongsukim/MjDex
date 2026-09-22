@@ -1,0 +1,83 @@
+[build-system]
+requires = ["flit_core>=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "mjdex"
+version = "0.0.1"
+description = "MuJoCo dexterous manipulation environments for imitation learning and reinforcement learning fine-tuning"
+readme = "README.md"
+requires-python = ">=3.11"
+
+authors = [
+    { name = "Seongsu Kim" },
+]
+
+maintainers = [
+  {name = "Seongsu Kim", email = "ktjdtn7@keti.re.kr"},
+]
+
+dependencies = [
+    "wandb[media]",
+    "tqdm",
+    "matplotlib",
+    "ml_collections",
+    "distrax>=0.1.5",
+    "flax==0.10.2",
+    "jax[cuda12]==0.5.3",
+    "torch",
+    "colorlog",
+    "gymnasium",
+    "imageio[ffmpeg]",
+    "pyserial",
+    "opencv-python",
+    "atomics",
+    "pynput",
+    "numba",
+    "mujoco",
+    "avp_stream",
+    "nlopt",
+    "pin",
+    "scipy",
+    "absl-py",
+    "dm_control",
+    "numpy",
+    "termcolor",
+    "mink",
+    "bunny_teleop",
+    "dex_retargeting",
+]
+
+[tool.uv.extra-build-dependencies]
+grpcio-tools = ["setuptools<70"]
+
+[project.optional-dependencies]
+# AR output for collect/visionpro.py --stream: converts the exported MjDex scene
+# to USDZ so the Vision Pro can render it while we stream body poses.
+# mujoco-usd-converter caps mujoco at <3.12, but MjDex scenes convert fine on
+# 3.12.0 (verified on single-relocate and dual-hand-dishrack), and honouring the
+# cap would downgrade mujoco and break the warp extra. Install with --no-deps:
+#   pip install usd-exchange newton-usd-schemas numpy-stl tinyobjloader==2.0.0rc13 python-utils
+#   pip install --no-deps mujoco-usd-converter
+# `pip check` reports the cap as unsatisfied; that is expected.
+ar = [
+    "mujoco-usd-converter>=0.5.0",
+    "usd-exchange>=2.2.2",
+    "newton-usd-schemas>=0.4.0",
+    "numpy-stl>=3.2",
+    "tinyobjloader>=2.0.0rc13",
+    "python-utils>=3.4.5",
+]
+warp = [
+    "mujoco==3.12.0",
+    "mujoco-mjx==3.12.0",
+    "mujoco-warp==3.12.0",
+    "warp-lang>=1.15,<1.18",
+]
+test = ["pytest>=8"]
+
+[project.urls]
+Repository = "https://github.com/sseongsukim/MjDex"
+
+[project.entry-points."gymnasium.envs"]
+mjdex = "mjdex.envs:register_mjdex_envs"

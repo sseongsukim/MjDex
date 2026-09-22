@@ -1,0 +1,38 @@
+<mujoco model="rack">
+  <compiler angle="radian" meshdir="assets" texturedir="assets" inertiafromgeom="auto"/>
+
+  <default>
+    <default class="mug_rack_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0" mass="0"/>
+    </default>
+    <default class="mug_rack_collision">
+      <geom group="3" type="mesh" condim="6" priority="1" solref="0.01 1" solimp="0.99 0.999 0.001 0.5 1"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture type="2d" name="rack_texture" file="rack2_material_0.png"/>
+    <material name="rack_material" texture="rack_texture"/>
+    <mesh name="rack" file="mugrack2.obj"/>
+    <mesh name="rack_collision_0" file="mugrack2_collision_0.obj"/>
+    <mesh name="rack_collision_1" file="mugrack2_collision_1.obj"/>
+    <mesh name="rack_collision_2" file="mugrack2_collision_2.obj"/>
+    <mesh name="rack_collision_3" file="mugrack2_collision_3.obj"/>
+    <mesh name="rack_collision_4" file="mugrack2_collision_4.obj"/>
+    <mesh name="rack_collision_5" file="mugrack2_collision_5.obj"/>
+    <mesh name="rack_collision_6" file="mugrack2_collision_6.obj"/>
+  </asset>
+
+  <worldbody>
+    <body name="rack">
+      <geom name="rack_visual_geom" material="rack_material" mesh="rack" class="mug_rack_visual"/>
+      <geom name="rack_collision_geom_0" mesh="rack_collision_0" class="mug_rack_collision"/>
+      <geom name="rack_collision_geom_1" mesh="rack_collision_1" class="mug_rack_collision"/>
+      <geom name="rack_collision_geom_2" mesh="rack_collision_2" class="mug_rack_collision"/>
+      <geom name="rack_collision_geom_3" mesh="rack_collision_3" class="mug_rack_collision"/>
+      <geom name="rack_collision_geom_4" mesh="rack_collision_4" class="mug_rack_collision"/>
+      <geom name="rack_collision_geom_5" mesh="rack_collision_5" class="mug_rack_collision"/>
+      <geom name="rack_collision_geom_6" mesh="rack_collision_6" class="mug_rack_collision"/>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,29 @@
+# DexPilot retargeting config for Inspire RH56F1 Right Hand
+# URDF path is relative to the urdf_dir passed to RetargetingConfig.set_default_urdf_dir()
+# (set to mjdex/assets/ in visionpro_teleop.py)
+#
+# target_joint_names order intentionally matches the MuJoCo right_hand.xml actuator order:
+#   [thumb_1, thumb_2, index, middle, ring, little]
+# so the dex-retargeting output maps 1-to-1 onto gripper_actuator_ids with no reordering.
+retargeting:
+  type: DexPilot
+  urdf_path: inspire_rh56f1/assets_right/urdf/inspire_rh56f1_right.urdf
+
+  target_joint_names:
+    - right_thumb_1_joint
+    - right_thumb_2_joint
+    - right_index_1_joint
+    - right_middle_1_joint
+    - right_ring_1_joint
+    - right_little_1_joint
+
+  wrist_link_name: base_link
+
+  # Fingertip links in our URDF (little_tip replaces pinky_tip from the reference)
+  finger_tip_link_names: [thumb_tip, index_tip, middle_tip, ring_tip, little_tip]
+
+  # Scale human hand → robot hand (human hands are slightly larger)
+  scaling_factor: 1.15
+
+  # Low-pass smoothing: 1.0 = no filtering (good for offline replay)
+  low_pass_alpha: 1.0

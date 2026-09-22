@@ -1,0 +1,86 @@
+<mujoco model="dish">
+  <compiler angle="radian" meshdir="assets" texturedir="assets" inertiafromgeom="auto" />
+  <default>
+    <default class="dish_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0" mass="0" />
+    </default>
+    <default class="dish_collision">
+      <geom group="3" type="mesh" condim="6" priority="1" solref="0.01 1" solimp="0.99 0.999 0.001 0.5 1" />
+    </default>
+  </default>
+  <asset>
+    <texture type="2d" name="plate" file="plate.png" />
+    <material name="plate" texture="plate" specular="0.5" shininess="0.5" />
+    <mesh name="plate" file="plate.obj" />
+    <mesh name="plate_collision_0" file="plate_collision_0.obj" />
+    <mesh name="plate_collision_1" file="plate_collision_1.obj" />
+    <mesh name="plate_collision_2" file="plate_collision_2.obj" />
+    <mesh name="plate_collision_3" file="plate_collision_3.obj" />
+    <mesh name="plate_collision_4" file="plate_collision_4.obj" />
+    <mesh name="plate_collision_5" file="plate_collision_5.obj" />
+    <mesh name="plate_collision_6" file="plate_collision_6.obj" />
+    <mesh name="plate_collision_7" file="plate_collision_7.obj" />
+    <mesh name="plate_collision_8" file="plate_collision_8.obj" />
+    <mesh name="plate_collision_9" file="plate_collision_9.obj" />
+    <mesh name="plate_collision_10" file="plate_collision_10.obj" />
+    <mesh name="plate_collision_11" file="plate_collision_11.obj" />
+    <mesh name="plate_collision_12" file="plate_collision_12.obj" />
+    <mesh name="plate_collision_13" file="plate_collision_13.obj" />
+    <mesh name="plate_collision_14" file="plate_collision_14.obj" />
+    <mesh name="plate_collision_15" file="plate_collision_15.obj" />
+    <mesh name="plate_collision_16" file="plate_collision_16.obj" />
+    <mesh name="plate_collision_17" file="plate_collision_17.obj" />
+    <mesh name="plate_collision_18" file="plate_collision_18.obj" />
+    <mesh name="plate_collision_19" file="plate_collision_19.obj" />
+    <mesh name="plate_collision_20" file="plate_collision_20.obj" />
+    <mesh name="plate_collision_21" file="plate_collision_21.obj" />
+    <mesh name="plate_collision_22" file="plate_collision_22.obj" />
+    <mesh name="plate_collision_23" file="plate_collision_23.obj" />
+    <mesh name="plate_collision_24" file="plate_collision_24.obj" />
+    <mesh name="plate_collision_25" file="plate_collision_25.obj" />
+    <mesh name="plate_collision_26" file="plate_collision_26.obj" />
+    <mesh name="plate_collision_27" file="plate_collision_27.obj" />
+    <mesh name="plate_collision_28" file="plate_collision_28.obj" />
+    <mesh name="plate_collision_29" file="plate_collision_29.obj" />
+    <mesh name="plate_collision_30" file="plate_collision_30.obj" />
+    <mesh name="plate_collision_31" file="plate_collision_31.obj" />
+  </asset>
+  <worldbody>
+    <body name="body">
+      <joint name="joint" type="free" damping="0.005" />
+      <geom name="visual_geom" material="plate" mesh="plate" class="dish_visual" />
+      <geom name="collision_geom_0" mesh="plate_collision_0" class="dish_collision" />
+      <geom name="collision_geom_1" mesh="plate_collision_1" class="dish_collision" />
+      <geom name="collision_geom_2" mesh="plate_collision_2" class="dish_collision" />
+      <geom name="collision_geom_3" mesh="plate_collision_3" class="dish_collision" />
+      <geom name="collision_geom_4" mesh="plate_collision_4" class="dish_collision" />
+      <geom name="collision_geom_5" mesh="plate_collision_5" class="dish_collision" />
+      <geom name="collision_geom_6" mesh="plate_collision_6" class="dish_collision" />
+      <geom name="collision_geom_7" mesh="plate_collision_7" class="dish_collision" />
+      <geom name="collision_geom_8" mesh="plate_collision_8" class="dish_collision" />
+      <geom name="collision_geom_9" mesh="plate_collision_9" class="dish_collision" />
+      <geom name="collision_geom_10" mesh="plate_collision_10" class="dish_collision" />
+      <geom name="collision_geom_11" mesh="plate_collision_11" class="dish_collision" />
+      <geom name="collision_geom_12" mesh="plate_collision_12" class="dish_collision" />
+      <geom name="collision_geom_13" mesh="plate_collision_13" class="dish_collision" />
+      <geom name="collision_geom_14" mesh="plate_collision_14" class="dish_collision" />
+      <geom name="collision_geom_15" mesh="plate_collision_15" class="dish_collision" />
+      <geom name="collision_geom_16" mesh="plate_collision_16" class="dish_collision" />
+      <geom name="collision_geom_17" mesh="plate_collision_17" class="dish_collision" />
+      <geom name="collision_geom_18" mesh="plate_collision_18" class="dish_collision" />
+      <geom name="collision_geom_19" mesh="plate_collision_19" class="dish_collision" />
+      <geom name="collision_geom_20" mesh="plate_collision_20" class="dish_collision" />
+      <geom name="collision_geom_21" mesh="plate_collision_21" class="dish_collision" />
+      <geom name="collision_geom_22" mesh="plate_collision_22" class="dish_collision" />
+      <geom name="collision_geom_23" mesh="plate_collision_23" class="dish_collision" />
+      <geom name="collision_geom_24" mesh="plate_collision_24" class="dish_collision" />
+      <geom name="collision_geom_25" mesh="plate_collision_25" class="dish_collision" />
+      <geom name="collision_geom_26" mesh="plate_collision_26" class="dish_collision" />
+      <geom name="collision_geom_27" mesh="plate_collision_27" class="dish_collision" />
+      <geom name="collision_geom_28" mesh="plate_collision_28" class="dish_collision" />
+      <geom name="collision_geom_29" mesh="plate_collision_29" class="dish_collision" />
+      <geom name="collision_geom_30" mesh="plate_collision_30" class="dish_collision" />
+      <geom name="collision_geom_31" mesh="plate_collision_31" class="dish_collision" />
+    </body>
+  </worldbody>
+</mujoco>

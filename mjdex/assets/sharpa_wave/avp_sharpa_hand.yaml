@@ -1,0 +1,42 @@
+# AdaptiveOptimizerAnalytical Configuration for AVP data and Sharpa Wave.
+
+optimizer:
+  type: "AdaptiveOptimizerAnalytical"
+
+robot:
+  type: "sharpa_hand"
+
+retarget:
+  huber_delta: 2.0
+  huber_delta_dir: 0.5
+  norm_delta: 0.04
+
+  w_pos: 1.0
+  w_dir: 10.0
+  scaling: 1.0
+  project_tip_dir: false
+
+  w_full_hand: 1.0
+  segment_scaling:
+    thumb:  [1.251, 1.259, 1.214]
+    index:  [1.108, 1.148, 1.16]
+    middle: [1.101, 1.115, 1.128]
+    ring:   [1.117, 1.141, 1.155]
+    pinky:  [1.212, 1.29, 1.305]
+
+  pinch_thresholds:
+    index:  { d1: 2.0, d2: 4.0 }
+    middle: { d1: 2.0, d2: 4.0 }
+    ring:   { d1: 2.0, d2: 4.0 }
+    pinky:  { d1: 2.0, d2: 4.0 }
+
+  mediapipe_rotation:
+    x: -7.0
+    y: 0.0
+    z: 0.0
+
+render:
+  camera:
+    azimuth: 135
+    elevation: -20
+    distance: 0.5

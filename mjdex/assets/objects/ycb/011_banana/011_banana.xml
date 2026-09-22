@@ -1,0 +1,37 @@
+<mujoco model="011_banana">
+  <compiler meshdir="assets" texturedir="assets"/>
+
+  <default>
+    <default class="ycb_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0" mass="0"/>
+    </default>
+    <default class="ycb_collision">
+      <geom group="3" type="mesh" condim="6" priority="1" solref="0.01 2" solimp="0.99 0.999 0.001 0.5 1"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture type="2d" name="texture_map" file="texture_map.png"/>
+    <material name="material_0" texture="texture_map"/>
+    <mesh name="011_banana" file="011_banana.obj"/>
+  </asset>
+
+  <worldbody>
+    <body name="body">
+      <inertial pos="0.011476 -0.0073435 0.017963" mass="0.12" diaginertia="0.0002 0.0002 0.0002"/>
+      <joint name="joint" type="free" damping="0.005"/>
+      <geom name="visual_geom" material="material_0" mesh="011_banana" class="ycb_visual"/>
+      <geom name="collision_geom" mesh="011_banana" rgba="0.95 0.82 0.12 1" class="ycb_collision"/>
+    </body>
+
+    <body name="target_body" mocap="true" pos="0 0 1" quat="1 0 0 0">
+      <geom name="target_visual_geom"
+            type="mesh"
+            mesh="011_banana"
+            material="material_0"
+            contype="0" conaffinity="0"
+            group="2"
+            rgba="1 1 1 0.25"/>
+    </body>
+  </worldbody>
+</mujoco>
